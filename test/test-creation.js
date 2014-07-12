@@ -4,7 +4,7 @@ var path = require('path');
 var helpers = require('yeoman-generator').test;
 
 describe('jekyllrb-gulp generator', function () {
-  this.timeout(15000);
+  this.timeout(30000);
 
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
@@ -21,7 +21,7 @@ describe('jekyllrb-gulp generator', function () {
 
   it('creates expected files', function (done) {
 
-    setTimeout(done, 15000);
+    setTimeout(done, 30000);
 
     var expected = [
       // add files you expect to exist here.
