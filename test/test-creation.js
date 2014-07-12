@@ -3,14 +3,16 @@
 var path = require('path');
 var helpers = require('yeoman-generator').test;
 
-describe('jekyll-browser-sync generator', function () {
+describe('jekyllrb-gulp generator', function () {
+  this.timeout(15000);
+
   beforeEach(function (done) {
     helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
       if (err) {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('jekyll-browser-sync:app', [
+      this.app = helpers.createGenerator('jekyllrb-gulp:app', [
         '../../app'
       ]);
       done();
@@ -18,14 +20,19 @@ describe('jekyll-browser-sync generator', function () {
   });
 
   it('creates expected files', function (done) {
+
+    setTimeout(done, 15000);
+
     var expected = [
       // add files you expect to exist here.
-      '.jshintrc',
       '.editorconfig'
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': true
+      'someOption': true,
+      'cssDir': 'src/css',
+      'jsDir': 'src/js',
+      'templateType': 'default'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {

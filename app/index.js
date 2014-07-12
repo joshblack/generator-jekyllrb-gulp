@@ -110,7 +110,7 @@ Generator.prototype.askForTools = function askForTools() {
 
   this.prompt(prompts, function (props) {
 
-    this.cssPre = props.cssPre.toLowerCase();
+    this.cssPre = "Sass";
     this.autoPre = true;
     this.jsPre = props.jsPre !== 'None';
 
@@ -126,6 +126,7 @@ Generator.prototype.askForStructure = function askForStructure() {
   var slashFilter = function (input) {
     return input.replace(/^\/*|\/*$/g, '');
   };
+
   var prompts = [{
     name: 'cssDir',
     message: 'CSS directory',
@@ -134,24 +135,9 @@ Generator.prototype.askForStructure = function askForStructure() {
   },
   {
     name: 'jsDir',
-    message: 'Javascript directory',
+    message: 'JavasSript directory',
     default: 'src/js',
     filter: slashFilter
-  },
-  {
-    name: 'imgDir',
-    message: 'Image directory',
-    default: 'src/img',
-    filter: slashFilter
-  },
-  {
-    name: 'cssPreDir',
-    message: 'CSS preprocessor directory',
-    default: 'src/scss',
-    filter: slashFilter,
-    when: function () {
-      return cssPre;
-    }
   }];
 
   console.log(chalk.yellow('\nSet up some directories.') + ' ☛' +
@@ -160,15 +146,11 @@ Generator.prototype.askForStructure = function askForStructure() {
   this.prompt(prompts, function (props) {
 
     this.cssDir    = props.cssDir;
-    this.jsDir     = props.jsDir;
-    this.imgDir    = props.imgDir;
-    this.cssPreDir = props.cssPreDir;
-    this.jsPreDir  = props.jsPreDir;
+    this.jsDir     = props.jsDir
 
     // Split asset directories on slashes
     this.cssExDir   = props.cssDir.split('/').pop();
     this.jsExDir    = props.jsDir.split('/').pop();
-    this.imgExDir   = props.imgDir.split('/').pop();
 
     cb();
   }.bind(this));
@@ -255,7 +237,6 @@ Generator.prototype.templates = function templates() {
   this.mkdir('_includes');
   this.mkdir(this.cssDir);
   this.mkdir(this.jsDir);
-  this.mkdir(this.imgDir);
 
   // Jekyll config files
   this.template('_config.yml');
