@@ -37,5 +37,5 @@ Generator-jekyllrb-gulp is ideal for developing performant static sites and prot
 
 ## More on Yeoman and Gulp
 
-[Getting started with Yeoman](http://yeoman.io/gettingstarted.html)
-[Getting started with Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
+- [Getting started with Yeoman](http://yeoman.io/gettingstarted.html)
+- [Getting started with Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
