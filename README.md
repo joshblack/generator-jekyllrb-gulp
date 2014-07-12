@@ -1,4 +1,4 @@
-# generator-jekyll-browser-sync [![Build Status](https://secure.travis-ci.org/joshblack/generator-jekyll-browser-sync.png?branch=master)](https://travis-ci.org/joshblack/generator-jekyll-browser-sync)
+# generator-jekyllrb-gulp [![Build Status](https://secure.travis-ci.org/joshblack/generator-jekyllrb-gulp.png?branch=master)](https://travis-ci.org/joshblack/generator-jekyllrb-gulp)
 
 > [Yeoman](http://yeoman.io) generator
 
@@ -23,10 +23,10 @@ $ npm install -g yo
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-jekyll-browser-sync from npm, run:
+To install generator-jekyllrb-gulp from npm, run:
 
 ```bash
-$ npm install -g generator-jekyll-browser-sync
+$ npm install -g generator-jekyllrb-gulp
 ```
 
 Finally, initiate the generator:

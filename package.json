@@ -4,7 +4,7 @@
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "joshblack/generator-jekyll-browser-sync",
+  "repository": "joshblack/generator-jekyllrb-gulp",
   "author": {
     "name": "Josh Black",
     "email": "joshuatblack@ufl.edu",
