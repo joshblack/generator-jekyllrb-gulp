@@ -1,7 +1,7 @@
 {
   "name": "generator-jekyllrb-gulp",
   "version": "0.1.0",
-  "description": "Yeoman generator",
+  "description": "A Yeoman Generator for Jekyllrb using Gulp for builds and Browser Sync",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "joshblack/generator-jekyllrb-gulp",
