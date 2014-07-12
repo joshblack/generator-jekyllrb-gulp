@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-jekyll-browser-sync' ]; then cd .. && eval "mv $currentfolder generator-jekyll-browser-sync" && cd generator-jekyll-browser-sync; fi
+
